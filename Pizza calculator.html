@@ -1,0 +1,135 @@
+<html> 
+<body>
+<script>
+//Xander Briem
+//Pizza calculator
+
+//Vraagt de klant of hij het zeker weet om de pizza's te bestellen.
+var zekerheid;
+
+//Vraagt de klant of hij een small/medium/large pizza wilt kopen.
+var small;
+var medium;
+var large;
+
+//Vraagt de klant hoeveel small/medium/large pizza's hij wilt.
+var hoeveelsmall;
+var hoeveelmedium;
+var hoeveellarge;
+
+//Prijzen voor de pizza's.
+const PRIJZENSMALL=4;
+const PRIJZENMEDIUM=6;
+const PRIJZENLARGE=11;
+
+//Uitkomst als de mensen van die pizza hebben besteld.
+var prijzensmalluitkomst = 0;
+var prijzenmediumuitkomst = 0;
+var prijzenlargeuitkomst = 0;
+
+
+
+
+//Verwelkomd de klant.
+alert("Welkom!");
+
+
+
+
+//Zegt wat de klant gaat zien.
+alert("De volgende vragen gaan over hoeveel pizza's je wilt kopen.", "");
+
+
+
+
+while (true) {
+small = prompt("Wil je een small pizza kopen? Je kan alleen met 'ja' of 'nee' antwoorden.", ""); //vraagt de klant of hij een small pizza wilt kopen.
+if (small === 'ja') {
+hoeveelsmall = prompt("Hoeveel small pizza's wil je kopen?") //Vraagt de klant hoeveel small pizza's hij wilt kopen.
+}
+if (hoeveelsmall >= 1) {    
+break 
+}
+else if (hoeveelsmall <= 1) { 
+    alert("Je kan niet dat aantal pizza's bestellen."); //Als hij als antwoord een cijfer geeft dat lager dan 1 is kan hij niet door.
+    }
+if (small === 'nee') { //Als de klant nee antwoord, op de vraag of hij een small pizza wilt kopen, gaat hij verder naar de volgende vraag.
+	break
+}
+}
+
+while (true) {
+medium = prompt("Wil je een medium pizza kopen? Je kan alleen met 'ja' of 'nee' antwoorden.", ""); //vraagt de klant of hij een medium pizza wilt kopen.
+if (medium === 'ja') {
+hoeveelmedium = prompt("Hoeveel medium pizza's wil je kopen?") 
+}
+if (hoeveelmedium >= 1) {    
+break 
+}
+else if (hoeveelmedium <= 1) { 
+    alert("Je kan niet dat aantal pizza's bestellen."); //Als hij als antwoord een cijfer geeft dat lager dan 1 is kan hij niet door.
+    }
+if (medium === 'nee') { //Als de klant nee antwoord, op de vraag of hij een medium pizza wilt kopen, gaat hij verder naar de volgende vraag.
+	break 
+}
+}
+
+while (true) {
+large = prompt("Wil je een large pizza kopen? Je kan alleen met 'ja' of 'nee' antwoorden.", ""); //Vraagt de klant of hij een large pizza wilt kopen.
+if (large === 'ja') {
+hoeveellarge = prompt("Hoeveel large pizza's wil je kopen?")
+}
+if (hoeveellarge >= 1) {    
+break 
+}
+else if (hoeveellarge <= 1) { 
+    alert("Je kan niet dat aantal pizza's bestellen"); //Als hij als antwoord een cijfer geeft dat lager dan 1 is kan hij niet door.
+    }
+if (large === 'nee') { //Als de klant nee antwoord, op de vraag of hij een large pizza wilt kopen, gaat hij verder naar de volgende vraag.
+	break
+}
+}
+
+
+
+
+while (true) {
+zekerheid = prompt("Weet je zeker dat je deze aantallen pizza's wilt kopen? Typ 'ja' als je het zeker weet.", ""); //De klant kan alleen doorgaan als hij 'ja' als antwoord geeft.
+if (zekerheid === 'ja') {
+    break
+}
+alert("Ik kan u niet door laten gaan zonder dat u achter uw keuze staat."); //Als hij niet ja als antwoord geeft kan hij niet door.
+}
+
+
+
+
+//Als de klant een small pizza heeft gekocht, laat hij hier zien hoeveel hij er heeft gekocht, en hoeveel dat totaal kost voor die maat.
+if (small ===  'ja') {
+document.write("een small pizza =" + " " + PRIJZENSMALL + " " + "euro, dus" + " " + PRIJZENSMALL + "x" + hoeveelsmall + "=");
+document.write(prijzensmalluitkomst = PRIJZENSMALL * hoeveelsmall) + "=" + prijzensmalluitkomst;
+document.write("  ")
+}
+
+//Als de klant een medium pizza heeft gekocht, laat hij hier zien hoeveel hij er heeft gekocht, en hoeveel dat totaal kost voor die maat.
+if(medium ===  'ja') {
+document.write("een medium pizza =" + " " + PRIJZENMEDIUM + " " + "euro, dus" + " " + PRIJZENMEDIUM + "x" + hoeveelmedium + "=");
+document.write(prijzenmediumuitkomst = PRIJZENMEDIUM * hoeveelmedium) + "=" + prijzenmediumuitkomst;
+document.write("  ")
+}
+
+//Als de klant een large pizza heeft gekocht, laat hij hier zien hoeveel hij er heeft gekocht, en hoeveel dat totaal kost voor die maat.
+if(large ===  'ja') {
+document.write("een large pizza =" + " " + PRIJZENLARGE + " " + "euro, dus" + " " + PRIJZENLARGE + "x" + hoeveellarge + "=");
+document.write(prijzenlargeuitkomst = PRIJZENLARGE * hoeveellarge) + "=" + prijzenlargeuitkomst;
+}
+
+//Rekent de uitkomst uit van alle pizza's die hij heeft gekocht.
+eindbedrag = prijzensmalluitkomst + prijzenmediumuitkomst + prijzenlargeuitkomst
+
+//laat op het scherm zien wat het toaalbedrag is voor alle pizza's die hij heeft gekocht.
+document.write(" " + "dat kost dan totaal" +  " " + eindbedrag + " " + "euro")
+
+</script>
+</body>
+</html>
